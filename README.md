@@ -171,13 +171,15 @@ This code is released under the [Apache 2.0 license](LICENSE).
 [SFD](https://github.com/LittlePey/SFD)
 
 ## Citation
-    @inproceedings{TED,
-        title={Transformation-Equivariant 3D Object Detection for Autonomous Driving},
-        author={Wu, Hai and Wen, Chenglu and Li, Wei and Yang, Ruigang and Wang, Cheng},
-        year={2023},
-        booktitle={AAAI}
-        
-    }
+  @ARTICLE{10183841,
+  author={Hoang, Hiep Anh and Yoo, Myungsik},
+  journal={IEEE Sensors Journal}, 
+  title={3ONet: 3-D Detector for Occluded Object Under Obstructed Conditions}, 
+  year={2023},
+  volume={23},
+  number={16},
+  pages={18879-18892},
+  doi={10.1109/JSEN.2023.3293515}}
 
 
 
