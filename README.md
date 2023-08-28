@@ -25,8 +25,8 @@ We release 2 models, which are based on LiDAR-only.
 
 |                                             |Modality|GPU memory of training| Easy | Mod. | Hard  | download | 
 |---------------------------------------------|----------:|----------:|:-------:|:-------:|:-------:|:---------:|
-| [3ONet_1](tools/cfgs/models/kitti/3ONet-1.yaml)|LiDAR|~14 GB |94.24 |87.32| 84.17|:---------:|
-| [3ONet_2](tools/cfgs/models/kitti/3ONet-2.yaml)|LiDAR|~14 GB| 93.55 |86.24 |83.29 |:---------:|
+| [3ONet-1](tools/cfgs/models/kitti/3ONet-1.yaml)|LiDAR|~14 GB |94.24 |87.32| 84.17|:---------:|
+| [3ONet-2](tools/cfgs/models/kitti/3ONet-2.yaml)|LiDAR|~14 GB| 93.55 |86.24 |83.29 |:---------:|
 
 ## Getting Started
 ### Dependency
@@ -54,51 +54,11 @@ TED
 ├── pcdet
 ├── tools
 ```
-
-You need creat a 'velodyne_depth' dataset to run our multimodal detector:
-You can download our preprocessed data from [google (13GB)](https://drive.google.com/file/d/1xki9v_zsQMM8vMVNo0ENi1Mh_GNMjHUg/view?usp=sharing), [baidu (a20o)](https://pan.baidu.com/s/1OH4KIVoSSH7ea3-3CqkZRQ), or generate the data by yourself:
-* [Install this project](#installation).
-* Download the PENet depth completion model [here (500M)](https://drive.google.com/file/d/1RDdKlKJcas-G5OA49x8OoqcUDiYYZgeM/view?usp=sharing) and put it into ```tools/PENet```.
-* Then run the following code to generate RGB pseudo points.
-```
-cd tools/PENet
-python3 main.py --detpath [your path like: ../../data/kitti/training]
-```
-
-After 'velodyne_depth' generation, run following command to creat dataset infos:
-```
-cd ../..
-python3 -m pcdet.datasets.kitti.kitti_dataset create_kitti_infos tools/cfgs/dataset_configs/kitti_dataset.yaml
-python3 -m pcdet.datasets.kitti.kitti_dataset_mm create_kitti_infos tools/cfgs/dataset_configs/kitti_dataset.yaml
-```
-
-Anyway, the data structure should be: 
-```
-TED
-├── data
-│   ├── kitti
-│   │   │── ImageSets
-│   │   │── training
-│   │   │   ├──calib & velodyne & label_2 & image_2 & (optional: planes) & velodyne_depth
-│   │   │── testing
-│   │   │   ├──calib & velodyne & image_2 & velodyne_depth
-│   │   │── gt_database
-│   │   │── gt_database_mm
-│   │   │── kitti_dbinfos_train_mm.pkl
-│   │   │── kitti_dbinfos_train.pkl
-│   │   │── kitti_infos_test.pkl
-│   │   │── kitti_infos_train.pkl
-│   │   │── kitti_infos_trainval.pkl
-│   │   │── kitti_infos_val.pkl
-├── pcdet
-├── tools
-```
-
 ### Installation
 
 ```
-git clone https://github.com/hailanyi/TED.git
-cd TED
+git clone https://github.com/hiepbk/3ONet.git
+cd 3ONet
 python3 setup.py develop
 ```
 
@@ -109,10 +69,10 @@ Single GPU train:
 cd tools
 python3 train.py --cfg_file ${CONFIG_FILE}
 ```
-For example, if you train the TED-S model:
+For example, if you train the 3ONet-1 model:
 ```
 cd tools
-python3 train.py --cfg_file cfgs/models/kitti/TED-S.yaml
+python3 train.py --cfg_file cfgs/models/kitti/3ONet-1.yaml
 ```
 
 Multiple GPU train: 
@@ -132,11 +92,11 @@ cd tools
 python3 test.py --cfg_file ${CONFIG_FILE} --batch_size ${BATCH_SIZE} --ckpt ${CKPT}
 ```
 
-For example, if you test the TED-S model:
+For example, if you test the 3ONet-1 model:
 
 ```
 cd tools
-python3 test.py --cfg_file cfgs/models/kitti/TED-S.yaml --ckpt TED-S.pth
+python3 test.py --cfg_file cfgs/models/kitti/3ONet-1.yaml --ckpt 3ONet-1.pth
 ```
 
 Multiple GPU test: you need modify the gpu number in the dist_test.sh and run
