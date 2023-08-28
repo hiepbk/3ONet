@@ -37,6 +37,7 @@ Our released implementation is tested on.
 + Spconv 1.2.1
 + NVIDIA CUDA 11.1
 + 2x RTX 3090 GPUs
+  
 We also tested on.
 + Ubuntu 18.04
 + Python 3.9.13
