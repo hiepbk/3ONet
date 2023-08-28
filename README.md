@@ -31,20 +31,12 @@ We release 2 models, which are based on LiDAR-only.
 ## Getting Started
 ### Dependency
 Our released implementation is tested on.
-+ Ubuntu 18.04
-+ Python 3.6.9 
-+ PyTorch 1.8.1
++ Ubuntu 20.04
++ Python 3.7.13
++ PyTorch 1.7.1
 + Spconv 1.2.1
 + NVIDIA CUDA 11.1
-+ 8x Tesla V100 GPUs
-
-We also tested on.
-+ Ubuntu 18.04
-+ Python 3.9.13
-+ PyTorch 1.8.1
-+ Spconv 2.1.22 # pip install spconv-cu111
-+ NVIDIA CUDA 11.1
-+ 2x 3090 GPUs
++ 2x RTX 3090 GPUs
 
 ### Prepare dataset
 
