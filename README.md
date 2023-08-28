@@ -132,7 +132,7 @@ This code is released under the [Apache 2.0 license](LICENSE).
 
 
 
-   @ARTICLE{10183841,
+   @article{10183841,
 
    
      author={Hoang, Hiep Anh and Yoo, Myungsik},
