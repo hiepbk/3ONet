@@ -2,15 +2,14 @@
 # 3-D Detector for Occluded Object Under Obstructed Conditions
 This is a improved version of [3ONet](https://ieeexplore.ieee.org/document/10183841) 
 This code is mainly based on [OpenPCDet](https://github.com/open-mmlab/OpenPCDet) and [SA-SSD](https://github.com/skyhehe123/SA-SSD), some codes are from 
-[BtcDet](https://github.com/Xharlie/BtcDet)
-
+[BtcDet](https://github.com/Xharlie/BtcDet) and [PCN] (https://github.com/qinglew/PCN-PyTorch).
 ## Detection Framework
 The overall detection framework is shown below.
-(1) Transformation-equivariant Sparse Convolution (TeSpConv) backbone; (2) Transformation-equivariant Bird Eye View (TeBEV) pooling; 
-(3) Multi-grid pooling and multi-refinement. 
-TeSpConv applies shared weights on multiple transformed point clouds to record the transformation-equivariant voxel features. 
-TeBEV pooling aligns and aggregates the scene-level equivariant features into lightweight representations for proposal generation.
- Multi-grid pooling and multi-refinement align and aggregate the instance-level invariant features for proposal refinement.
+(1) 3D Sparse Convolution backbone; (2) Point Segmentation Network; 
+(3) Point Reconstruction Network,
+(4) Fusion and Refinement Network.
+We use sparse backbone to efficiently extract multiscale features. Point Segmentation Network and RPN provide valuable information of object'shape. 3ONet applies encoder–decoder
+approach for the Point Reconstruction Network to recover the missing shape of the object in the 3D scenes. Fusion and Refinement Network aggregate the instance-level invariant features for proposal refinement.
  
 ![](./tools/images/framework.png)
 
@@ -162,24 +161,22 @@ This code is released under the [Apache 2.0 license](LICENSE).
 
 ## Acknowledgement
 
-[CasA](https://github.com/hailanyi/CasA)
+[SA-SDD](https://github.com/skyhehe123/SA-SSD)
 
 [OpenPCDet](https://github.com/open-mmlab/OpenPCDet)
 
-[PENet](https://github.com/JUGGHM/PENet_ICRA2021)
+[BtcDet](https://github.com/Xharlie/BtcDet)
 
-[SFD](https://github.com/LittlePey/SFD)
+[PCN](https://github.com/qinglew/PCN-PyTorch)
 
 ## Citation
-  @ARTICLE{10183841,
+@article{hoang20233onet,
+  title={3ONet: 3D Detector for Occluded Object under Obstructed Conditions},
   author={Hoang, Hiep Anh and Yoo, Myungsik},
-  journal={IEEE Sensors Journal}, 
-  title={3ONet: 3-D Detector for Occluded Object Under Obstructed Conditions}, 
+  journal={IEEE Sensors Journal},
   year={2023},
-  volume={23},
-  number={16},
-  pages={18879-18892},
-  doi={10.1109/JSEN.2023.3293515}}
+  publisher={IEEE}
+}
 
 
 
