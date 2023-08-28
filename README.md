@@ -11,7 +11,7 @@ The overall detection framework is shown below.
 We use sparse backbone to efficiently extract multiscale features. Point Segmentation Network and RPN provide valuable information of object'shape. 3ONet applies encoder–decoder
 approach for the Point Reconstruction Network to recover the missing shape of the object in the 3D scenes. Fusion and Refinement Network aggregate the instance-level invariant features for proposal refinement.
  
-![](./architecture.jgp)
+![](./Architecture.jpg)
 
 ## Model Zoo
 We release 2 models, which are based on LiDAR-only. 
