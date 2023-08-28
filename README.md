@@ -2,7 +2,9 @@
 # 3-D Detector for Occluded Object Under Obstructed Conditions
 This is a improved version of [3ONet](https://ieeexplore.ieee.org/document/10183841) 
 This code is mainly based on [OpenPCDet](https://github.com/open-mmlab/OpenPCDet) and [SA-SSD](https://github.com/skyhehe123/SA-SSD), some codes are from 
-[BtcDet](https://github.com/Xharlie/BtcDet) and [PCN](https://github.com/qinglew/PCN-PyTorch). The code will be made public gradually.
+[BtcDet](https://github.com/Xharlie/BtcDet) and [PCN](https://github.com/qinglew/PCN-PyTorch). 
+
+The code will be made public gradually.
 ## Detection Framework
 The overall detection framework is shown below.
 (1) 3D Sparse Convolution backbone; (2) Point Segmentation Network; 
