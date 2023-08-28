@@ -131,10 +131,7 @@ This code is released under the [Apache 2.0 license](LICENSE).
 
 
 
-
    @article{10183841,
-
-   
      author={Hoang, Hiep Anh and Yoo, Myungsik},
      journal={IEEE Sensors Journal}, 
      title={3ONet: 3-D Detector for Occluded Object Under Obstructed Conditions}, 
