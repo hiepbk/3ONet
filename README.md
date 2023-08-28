@@ -14,7 +14,7 @@ approach for the Point Reconstruction Network to recover the missing shape of th
 ![](./tools/images/framework.png)
 
 ## Model Zoo
-We release 4 models, which are based on LiDAR-only. 
+We release 2 models, which are based on LiDAR-only. 
 * All models are trained with 2 RTX 3090 GPUs and are available for download. 
 
 * The models are trained with train split (3712 samples) of KITTI dataset
@@ -25,8 +25,8 @@ We release 4 models, which are based on LiDAR-only.
 
 |                                             |Modality|GPU memory of training| Easy | Mod. | Hard  | download | 
 |---------------------------------------------|----------:|----------:|:-------:|:-------:|:-------:|:---------:|
-| [3ONet_1](tools/cfgs/models/kitti/TED-S.yaml)|LiDAR|~15 GB |93.25 |87.99| 86.28|:---------:|
-| [3ONet_2](tools/cfgs/models/kitti/TED-M.yaml)|LiDAR|~15 GB| 95.62 |89.24 |86.77 |:---------:|
+| [3ONet_1](tools/cfgs/models/kitti/3ONet-1.yaml)|LiDAR|~14 GB |94.24 |87.32| 84.17|:---------:|
+| [3ONet_2](tools/cfgs/models/kitti/3ONet-2.yaml)|LiDAR|~14 GB| 93.55 |86.24 |83.29 |:---------:|
 
 ## Getting Started
 ### Dependency
