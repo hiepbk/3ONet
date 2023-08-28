@@ -128,10 +128,3 @@ This code is released under the [Apache 2.0 license](LICENSE).
 [PCN](https://github.com/qinglew/PCN-PyTorch)
 
 ## Citation
-    @article{hoang20233onet,
-   title={3ONet: 3D Detector for Occluded Object under Obstructed Conditions},
-   author={Hoang, Hiep Anh and Yoo, Myungsik},
-   journal={IEEE Sensors Journal},
-   year={2023},
-   publisher={IEEE}
- }
