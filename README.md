@@ -37,7 +37,13 @@ Our released implementation is tested on.
 + Spconv 1.2.1
 + NVIDIA CUDA 11.1
 + 2x RTX 3090 GPUs
-
+We also tested on.
++ Ubuntu 18.04
++ Python 3.9.13
++ PyTorch 1.8.1
++ Spconv 2.1.22 # pip install spconv-cu111
++ NVIDIA CUDA 11.4
++ 2x 3090 GPUs
 ### Prepare dataset
 
 Please download the official [KITTI 3D object detection](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d) dataset and organize the downloaded files as follows (the road planes could be downloaded from [[road plane]](https://drive.google.com/file/d/1d5mq0RXRnvHPVeKx6Q612z0YRO1t2wAp/view?usp=sharing), which are optional for data augmentation in the training):
