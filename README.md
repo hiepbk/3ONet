@@ -128,7 +128,6 @@ This code is released under the [Apache 2.0 license](LICENSE).
 [PCN](https://github.com/qinglew/PCN-PyTorch)
 
 ## Citation
-
    @ARTICLE{10183841,
      author={Hoang, Hiep Anh and Yoo, Myungsik},
      journal={IEEE Sensors Journal}, 
@@ -137,4 +136,5 @@ This code is released under the [Apache 2.0 license](LICENSE).
      volume={23},
      number={16},
      pages={18879-18892},
-     doi={10.1109/JSEN.2023.3293515}}
+     doi={10.1109/JSEN.2023.3293515}
+     }
