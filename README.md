@@ -14,9 +14,8 @@ approach for the Point Reconstruction Network to recover the missing shape of th
 ![](./tools/images/framework.png)
 
 ## Model Zoo
-We release two models, which are based on LiDAR-only and multi-modal data respectively. We denoted the two models as TED-S and TED-M respectively.
-
-* All models are trained with 8 V100 GPUs and are available for download. 
+We release 4 models, which are based on LiDAR-only. 
+* All models are trained with 2 RTX 3090 GPUs and are available for download. 
 
 * The models are trained with train split (3712 samples) of KITTI dataset
 
@@ -26,8 +25,8 @@ We release two models, which are based on LiDAR-only and multi-modal data respec
 
 |                                             |Modality|GPU memory of training| Easy | Mod. | Hard  | download | 
 |---------------------------------------------|----------:|----------:|:-------:|:-------:|:-------:|:---------:|
-| [TED-S](tools/cfgs/models/kitti/TED-S.yaml)|LiDAR only|~12 GB |93.25 |87.99| 86.28| [google](https://drive.google.com/file/d/1hqoj-lV4Cr3m7U3EphdCSjHmhBlekRm8/view?usp=sharing) / [baidu(p91t)](https://pan.baidu.com/s/1ecobwO673ScrGYOHbooGIw) / 36M | 
-| [TED-M](tools/cfgs/models/kitti/TED-M.yaml)|LiDAR+RGB |~15 GB| 95.62 |89.24 |86.77 | [google](https://drive.google.com/file/d/1hXe1at-LKogTfWorALmq6djjYqhKX7nD/view?usp=sharing) / [baidu(nkr5)](https://pan.baidu.com/s/1FP80452dfM09YtE8DBaicQ) / 65M|
+| [3ONet_1](tools/cfgs/models/kitti/TED-S.yaml)|LiDAR|~15 GB |93.25 |87.99| 86.28|:---------:|
+| [3ONet_2](tools/cfgs/models/kitti/TED-M.yaml)|LiDAR|~15 GB| 95.62 |89.24 |86.77 |:---------:|
 
 ## Getting Started
 ### Dependency
