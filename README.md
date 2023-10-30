@@ -1,6 +1,6 @@
 
 # 3-D Detector for Occluded Object Under Obstructed Conditions
-This is a improved version of [3ONet Publication](https://ieeexplore.ieee.org/document/10183841).
+This is a improved version of [3ONet](https://ieeexplore.ieee.org/document/10183841) research paper.
 This code is mainly based on [OpenPCDet](https://github.com/open-mmlab/OpenPCDet) and [SA-SSD](https://github.com/skyhehe123/SA-SSD), some codes are from 
 [BtcDet](https://github.com/Xharlie/BtcDet) and [PCN](https://github.com/qinglew/PCN-PyTorch). 
 
